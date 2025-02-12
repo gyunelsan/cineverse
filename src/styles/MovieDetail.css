@@ -1,0 +1,91 @@
+.movie-detail {
+  margin-top: 80px;
+  padding: 30px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+}
+.movie-detail img {
+  width: 330px;
+}
+
+.movie-content {
+  padding-top: 15px;
+}
+.movie-content p {
+  width: 600px;
+  font-size: 24px;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  letter-spacing: 1.6px;
+}
+.movie-content h1 {
+  font-size: 45px;
+  color: #a79f16;
+  font-weight: 800;
+}
+.release-date {
+  font-size: 17px;
+  font-weight: 500;
+  color: rgb(117, 117, 117);
+  letter-spacing: 1.5px;
+}
+.watch-btn {
+  background-color: transparent;
+  border: 1px solid #a79f16;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 20px 0px;
+  transition: 0.7s;
+  margin-top: 25px;
+}
+.watch-btn:hover {
+  background-color: #a79f16;
+}
+.continue-btn {
+  background-color: #a79f16;
+  transition: 0.7s;
+  margin-left: 20px;
+}
+
+.continue-btn:hover {
+  border: 1px solid #a79f16;
+  background-color: transparent;
+}
+.vote_count {
+  background-color: #a7a016c7;
+  color: black;
+}
+.vote_average {
+  margin: 0px 12px;
+}
+.modal-overlay {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1050px) {
+  .movie-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+  .movie-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 640px) {
+  .movie-content p {
+    width: 300px;
+    font-size: 19px;
+  }
+  .movie-content h1 {
+    font-size: 37px;
+  }
+  .movie-detail img {
+    width: 250px;
+  }
+}

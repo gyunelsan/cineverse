@@ -1,24 +1,44 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import Header from './components/layout/Header';
+import { Footer } from './components/layout/Footer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/pages/Home';
+import { MovieDetail } from './components/pages/MovieDetail';
+import { Movie } from './components/pages/Movie';
+import { Tvshows } from './components/pages/Tvshows';
+import { Pricing } from './components/pages/Pricing';
+import Loader from './components/common/Loader';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        {loading ? (
+          <Loader />
+        ) : (
+          <>
+            <Header />
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/movie' element={<Movie />} />
+              <Route path='/movie/:movieId' element={<MovieDetail />} />
+              <Route path='/tvshows' element={<Tvshows />} />
+              <Route path='/pricing' element={<Pricing />} />
+            </Routes>
+            <Footer />
+          </>
+        )}
+      </div>
+    </Router>
   );
 }
 

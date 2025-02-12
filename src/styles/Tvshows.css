@@ -1,0 +1,29 @@
+.tvshowSection{
+    /* background-image: url(../assets/tvshows_bg.jpg); */
+    background-color:  #f3e521;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+
+}
+.tvshowSection h2{
+font-size: 70px;
+font-weight: 700;
+}
+.tvshowSection span{
+    color: black;
+}
+.tvshowSection li{
+    list-style: none;
+    margin-right: 15px ;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
